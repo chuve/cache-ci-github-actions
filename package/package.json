@@ -1,0 +1,11 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^17.0.2",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0"
+  }
+}
