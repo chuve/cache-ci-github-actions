@@ -27,3 +27,7 @@ jobs:
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: yarn install
         working-directory: ${{env.HOME_DIR}}
+
+      - name: Installing Dependencies
+        run: yarn run start
+        working-directory: ${{env.HOME_DIR}}
