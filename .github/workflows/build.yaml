@@ -31,3 +31,10 @@ jobs:
       - name: Installing Dependencies
         run: yarn run start
         working-directory: ${{env.HOME_DIR}}
+
+      - name: MS Notification
+        uses: opsless/ms-teams-github-actions@main
+        if: always()
+        with:
+          github-token: ${{ github.token }}
+          webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
