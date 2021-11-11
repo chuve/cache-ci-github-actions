@@ -1,0 +1,21 @@
+name: Build
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+env:
+  RELEASE_VERSION: 1.0.12
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache Node Modules
+        run: |
+        echo "${RELEASE_VERSION//./-}"
