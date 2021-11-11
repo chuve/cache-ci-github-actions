@@ -18,4 +18,4 @@ jobs:
 
       - name: Cache Node Modules
         run: |
-        echo "${RELEASE_VERSION//./-}"
+          echo "${RELEASE_VERSION//./-}"
